@@ -1,76 +1,200 @@
 :root {
-    --cor-primaria: #055a05; /* verde-floresta */
-    --cor-secundaria: #f4a261; /* bege médio */
-    --cor-destaque1: #264653; /* azul-escuro acinzentado */
-    --cor-destaque2: #e9c46a; /* amarelo-claro dourado */
+    --cor-primaria: #055a05; 
+    --cor-secundaria: #fff;
+    --cor-destaque1: #264653;
+    --cor-destaque2: #e9c46a;
     --fonte-titulo: "Times New Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
-footer {
-    background-color: var(--cor-primaria);
-    color: var(--cor-destaque2);
-}
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-font-family: var(--fonte-body);
-color: var(--cor-destaque1);
+    padding: 0;
+    box-sizing: border-box;
 }
 header{
-    text-decoration-color: var(--cor-secundaria);
+    background-color: #055a05a8;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 840px;
+    max-height: 175px;
+    gap: 10px;
+    margin: 0 auto;
 }
-header, main, footer {
-max-width: 840px;
-margin: 0 auto;
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.10rem;
 }
-h1, h2 {
-font-family: var(--fonte-titulo);
-color: var(--cor-primaria);
-text-align: center;
+header nav ul li{
+    padding: 1.25rem;
+    border-radius: 6px;
+    opacity: 0.9;
+    background-color: #055c05 ;
 }
-nav, p, section, article {
-margin: 16px;
-padding: 8px;
+header nav ul {
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    list-style: none;
+
 }
-article{
-    background-color: rgb(132, 211, 101);
+header img{
+    border-radius: 6px;
+
+}
+header nav{
+    grid-column: 4;
+}
+body {
+    font-family: var(--fonte-body);
+    color: var(--cor-destaque1);
+}
+main, footer{
+    margin: 0 auto;
+    max-width: 840px;
+}
+h1 {
     position: absolute;
-    top: 310px;
+    top: -10px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--cor-destaque1);
+    color: #fff;
+    font-family: var(--fonte-titulo);
+    text-align: center;
 }
-.socialmedia a {
-text-decoration:none;
+.grid-historia {
+    display: grid;
+    gap: 0px 20px;
+    background-color: #f0f0f0;
+    
+    grid-template-columns: repeat(3, 1fr); 
+    
+    grid-template-areas: 
+        "header header header"
+        "esquerdo imagem direito";
+        
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.socialmedia img{
-display: inline;
-margin-left: 150px;
-width: 50px;
-height: 50px;
+
+.titulo {
+    margin-top: 30px;
+    grid-area: header;
+    text-align: center;
+    font-size: 30px;
+}
+
+.texto1 {
+    grid-area: esquerdo;
+    text-align: justify;
+}
+
+.grimg {
+    grid-area: imagem;
+}
+
+.grimg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto2 {
+    grid-area: direito;
+    text-align: justify;
+}
+.section-1{
+    padding: 20px;
+    margin: 10px -20px 20px -20px;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    text-align: center;
+}
+p, section, article {
+    margin: 16px;
+    padding: 8px;
 }
 .hero{
     position: relative;
 }
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+article{
+    background-color: #055a05de;
+    position: absolute;
+    top: 200px;
+    border-radius: 6px;
+}
 .hero article{
     position:absolute;
-}
-.hero img {
-display: block;
-width: 100%;
-height: auto;
-}
-h1 {
-position: absolute;
-top: 20px;
-width: 100%;
-padding: 16px;
-text-align: center;
-opacity: 0.7;
-background-color: var(--cor-destaque1);
-color: #fff;
+    height: 150px;
 }
 .hero article img {
-float: right;
-width: 125px;
+    float: right;
+    width: 125px;
+}
+.hero article p{
+    color: #f0f0f0;
+}
+
+
+.section-2{
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 0 0 20px 0;
+}
+
+.alinhar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+figure img{
+    width: 180%;
+    margin: 5px;
+    
+}   
+footer p{
+    display: flex;
+    justify-content: end;
+    grid-column: 5;
+    font-size: 15px;
+    padding: 0;
+}
+
+.socialmedia{
+    grid-column: 6;
+    display: flex;
+    justify-content: center;
+}
+.socialmedia a{
+    text-decoration: none;
+    font-size: 0;
+    padding: 0;
+    width: 60px;
+    margin: 15px;
+}
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria)    ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    align-items: center;
 }
