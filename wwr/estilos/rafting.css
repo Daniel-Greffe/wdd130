@@ -1,7 +1,7 @@
 :root {
     --cor-primaria: rgb(5, 90, 5); 
     --cor-secundaria: rgb(255, 255, 255);
-    --cor-destaque1: rgb(38, 70, 83);
+    --cor-destaque1: rgb(38, 83, 44);
     --cor-destaque2: rgb(255, 255, 255);
     --fonte-titulo: "Times New Roman", "Georgia", serif;
     --fonte-body: Arial, Helvetica, sans-serif;
@@ -37,7 +37,6 @@ header nav ul {
     gap: 20px;
     display: flex;
     list-style: none;
-
 }
 header img{
     border-radius: 6px;
@@ -64,6 +63,16 @@ h1 {
     color: rgb(255, 255, 255);
     font-family: var(--fonte-titulo);
 }
+.section-1{
+    padding: 20px;
+    margin: 10px -20px 20px -20px;
+}
+.titulo {
+    margin-top: 30px;
+    grid-area: header;
+    text-align: center;
+    font-size: 30px;
+}
 .grid-historia {
     color: rgb(5, 92, 5);
     display: grid;
@@ -80,41 +89,24 @@ h1 {
     max-width: 1000px;
     margin: 0 auto;
 }
-
-.titulo {
-    margin-top: 30px;
-    grid-area: header;
-    text-align: center;
-    font-size: 30px;
-}
-
 .texto1 {
     grid-area: esquerdo;
     text-align: justify;
     color: rgb(5, 92, 5);
 }
-
 .grimg {
     grid-area: imagem;
 }
-
 .grimg img {
     width: 100%;
     height: auto;
     display: block;
 }
-
 .texto2 {
     grid-area: direito;
     text-align: justify;
     color: rgb(5, 92, 5);
-
 }
-.section-1{
-    padding: 20px;
-    margin: 10px -20px 20px -20px;
-}
-
 h2 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
@@ -154,19 +146,16 @@ article{
     color: rgb(240, 240, 240);
 }
 
-
 .section-2{
     padding: 20px;
     background-color: rgb(240, 240, 240);
     margin: 0 0 20px 0;
     color:rgb(5, 92, 5);
 }
-
 .alinhar {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
-
 figure{
     display: flex;
     flex-direction: column;
@@ -176,7 +165,6 @@ figure{
 figure img{
     width: 90%;
     margin: 5px;
-    
 }   
 footer p{
     display: flex;
@@ -185,20 +173,17 @@ footer p{
     font-size: 15px;
     padding: 0;
 }
-
 .socialmedia{
     grid-column: 6;
     display: flex;
     justify-content: center;
-
 }
 .socialmedia a{
     text-decoration: none;
     font-size: 0;
     padding: 0;
-    width: 60px;
+    width: 40px;
     margin: 15px;
-
 }
 footer {
     background-color: var(--cor-primaria);
@@ -207,3 +192,105 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
     align-items: center;
 }
+
+/* ------------------------------------------------------- Contato ------------------------------------------------------------------*/
+
+.section-forms{
+    padding: 20px;
+    margin: 10px -20px 20px -20px;
+}
+.grid-formulario{
+    color: rgb(1, 12, 1);
+    display: grid;
+    gap: 0px 15px;
+    background-color: rgb(240, 240, 240);
+    
+    grid-template-columns: repeat(2, 1fr); 
+    
+    grid-template-areas: 
+        "header header"
+        "informacoes informacoes"
+        "maps direito";
+        
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.titulo-informacoes {
+    color: rgb(8, 70, 8);
+    margin-top: 20px;
+    text-align: center;
+    grid-area: header;
+    font-size: 24px;
+}
+.informacoes{
+    grid-area: informacoes;
+    color: rgb(6, 48, 6);
+    text-align: center;
+    font-size: 15px;
+}
+.griframe {
+    grid-area: maps;
+}
+iframe {
+    margin: 60px 18px;
+    border: none;
+    border-radius: 5px;
+}   
+.griforms {
+    grid-area: direito;
+    text-align: justify;
+    color: rgb(6, 48, 6);
+    margin-top: -60px;
+}
+.opcao {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.opcao input {
+    margin-right: 7px;
+    cursor: pointer;
+}
+form button{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    resize: vertical;
+    width: 90%;
+    margin-top: 15px;
+}
+form button:hover {
+    background-color: rgb(4, 32, 4);
+}
+form textarea {
+    width: 85%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    resize: vertical;
+}
+form input[type="text"],
+form input[type="email"] {
+    width: 60%;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.alinhados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.alinhados img{
+    width: 90%;
+    height: 240px;
+    border-radius: 5px;
+    margin: 5px;
+}   
