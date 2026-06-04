@@ -52,7 +52,7 @@ main, footer{
     margin: 0 auto;
     max-width: 840px;
 }
-h1 {
+.agaum{
     position: absolute;
     top: 10px;
     width: 100%;
@@ -173,12 +173,12 @@ footer p{
     font-size: 15px;
     padding: 0;
 }
-.socialmedia{
+.redes-sociais{
     grid-column: 6;
     display: flex;
     justify-content: center;
 }
-.socialmedia a{
+.redes-sociais a{
     text-decoration: none;
     font-size: 0;
     padding: 0;
@@ -217,13 +217,17 @@ footer {
     margin: 0 auto;
 }
 .titulo-informacoes {
-    color: rgb(8, 70, 8);
-    margin-top: 20px;
+    top: 30px;
+    width: 100%;
+    padding: 10px;
     text-align: center;
+    font-family: var(--fonte-titulo);
+    color: rgb(8, 70, 8);
     grid-area: header;
     font-size: 24px;
 }
 .informacoes{
+    margin-top: 30px;
     grid-area: informacoes;
     color: rgb(6, 48, 6);
     text-align: center;
@@ -236,6 +240,8 @@ iframe {
     margin: 60px 18px;
     border: none;
     border-radius: 5px;
+    width: 450px ;
+    height: 300px;
 }   
 .griforms {
     grid-area: direito;
@@ -262,7 +268,7 @@ form button{
     border-radius: 4px;
     text-align: center;
     resize: vertical;
-    width: 90%;
+    width: 85%;
     margin-top: 15px;
 }
 form button:hover {
@@ -281,7 +287,7 @@ form input[type="email"] {
     width: 60%;
     padding: 6px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 4px;
 }
 .alinhados {
